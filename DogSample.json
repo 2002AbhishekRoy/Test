@@ -1,0 +1,73 @@
+{
+    "dogs": [
+      {
+        "breed": "Golden Retriever",
+        "size": "Large",
+        "origin": "Scotland",
+        "temperament": ["Friendly", "Intelligent", "Devoted"],
+        "life_expectancy": "10-12 years"
+      },
+      {
+        "breed": "Bulldog",
+        "size": "Medium",
+        "origin": "England",
+        "temperament": ["Docile", "Willful", "Friendly"],
+        "life_expectancy": "8-10 years"
+      },
+      {
+        "breed": "Poodle",
+        "size": "Varies (Toy, Miniature, Standard)",
+        "origin": "Germany, France",
+        "temperament": ["Intelligent", "Active", "Alert"],
+        "life_expectancy": "12-15 years"
+      },
+      {
+        "breed": "Beagle",
+        "size": "Small to Medium",
+        "origin": "England",
+        "temperament": ["Curious", "Friendly", "Energetic"],
+        "life_expectancy": "12-15 years"
+      },
+      {
+        "breed": "German Shepherd",
+        "size": "Large",
+        "origin": "Germany",
+        "temperament": ["Confident", "Courageous", "Smart"],
+        "life_expectancy": "9-13 years"
+      },
+      {
+        "breed": "Chihuahua",
+        "size": "Small",
+        "origin": "Mexico",
+        "temperament": ["Lively", "Devoted", "Courageous"],
+        "life_expectancy": "12-20 years"
+      },
+      {
+        "breed": "Siberian Husky",
+        "size": "Medium",
+        "origin": "Siberia",
+        "temperament": ["Outgoing", "Friendly", "Alert"],
+        "life_expectancy": "12-15 years"
+      },
+      {
+        "breed": "Dachshund",
+        "size": "Small",
+        "origin": "Germany",
+        "temperament": ["Clever", "Stubborn", "Lively"],
+        "life_expectancy": "12-16 years"
+      },
+      {
+        "breed": "Shih Tzu",
+        "size": "Small",
+        "origin": "Tibet",
+        "temperament": ["Affectionate", "Friendly", "Outgoing"],
+        "life_expectancy": "10-18 years"
+      },
+      {
+        "breed": "Rottweiler",
+        "size": "Large",
+        "origin": "Germany",
+        "temperament": ["Confident", "Calm", "Courageous"],
+        "life_expectancy": "8-10 years"
+      }
+    ]
