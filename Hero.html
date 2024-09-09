@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        /* Hero section styling */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 0;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            color: #fff;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* About section */
+        .about-section {
+            padding: 60px 20px;
+            text-align: center;
+            background-color: #ffffff;
+        }
+
+        .about-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .about-section p {
+            color: #666;
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 20px auto;
+        }
+
+        /* Team section */
+        .team-section {
+            padding: 60px 20px;
+            background-color: #f8f8f8;
+            text-align: center;
+        }
+
+        .team-section h2 {
+            color: #333;
+            font-size: 2.5rem;
+        }
+
+        .team-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .team-member {
+            margin: 15px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 250px;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .team-member h3 {
+            margin: 15px 0 5px;
+            color: #333;
+        }
+
+        .team-member p {
+            color: #666;
+        }
+
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero section -->
+<section class="hero" style="background-image: url('https://images.unsplash.com/photo-1568572933382-74d440642117');">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+        <h1>About Us</h1>
+        <p>We are passionate about what we do and how we do it</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+    <h2>Our Mission</h2>
+    <p>
+        At our core, we believe in making the world a better place through innovation and dedication. Our team works hard every day to create solutions that have a positive impact on our community, customers, and the world. We strive for excellence and value integrity in all aspects of our work.
+    </p>
+</section>
+
+<!-- Team Section -->
+<section class="team-section">
+    <h2>Meet the Team</h2>
+    <div class="team-container">
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/men/31.jpg" alt="John Doe">
+            <h3>Ram Das</h3>
+            <p>Founder & CEO</p>
+        </div>
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Jane Smith">
+            <h3>Amit Pal</h3>
+            <p>Chief Technology Officer</p>
+        </div>
+        <div class="team-member">
+            <img src="https://randomuser.me/api/portraits/men/33.jpg" alt="Robert Brown">
+            <h3>Sunil Sinha</h3>
+            <p>Lead Designer</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 Your Company Name. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>

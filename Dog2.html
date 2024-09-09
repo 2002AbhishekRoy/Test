@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Breeds</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #4CAF50;
+        }
+        .dog-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .dog-card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            text-align: center;
+        }
+        .dog-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .dog-info {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Dog Breeds</h1>
+<div class="dog-container" id="dogContainer"></div>
+
+<script>
+    // Fetch the JSON data from the GitHub URL
+    fetch('https://raw.githubusercontent.com/2002AbhishekRoy/Test/main/DogSample.json')
+    .then(response => response.json())
+    .then(data => {
+        displayDogs(data.dogs);
+    })
+    .catch(error => console.error('Error fetching JSON:', error));
+
+    // Function to format breed names for Dog CEO API
+    function formatBreedName(breed) {
+        return breed.toLowerCase().replace(' ', '-');
+    }
+
+    // Function to display dog details on the page
+    function displayDogs(dogs) {
+        const container = document.getElementById('dogContainer');
+        
+        dogs.forEach(dog => {
+            // Create a card for each dog
+            const dogCard = document.createElement('div');
+            dogCard.classList.add('dog-card');
+            
+            // Add breed name
+            const breedName = document.createElement('h2');
+            breedName.textContent = dog.breed;
+            dogCard.appendChild(breedName);
+
+            // Fetch and display a dog image using Dog CEO API
+            fetch(`https://dog.ceo/api/breed/${formatBreedName(dog.breed)}/images/random`)
+    .then(response => response.json())
+    .then(imageData => {
+        const img = document.createElement('img');
+        img.src = imageData.message;
+        dogCard.appendChild(img);
+    })
+    .catch(error => {
+        console.error('Error fetching image:', error);
+        const img = document.createElement('img');
+        img.src = 'https://via.placeholder.com/300x200?text=No+Image+Available';
+        dogCard.appendChild(img);
+    });
+
+
+            // Add dog info (size, origin, temperament, life expectancy)
+            const dogInfo = document.createElement('div');
+            dogInfo.classList.add('dog-info');
+            dogInfo.innerHTML = `
+                <p><strong>Size:</strong> ${dog.size}</p>
+                <p><strong>Origin:</strong> ${dog.origin}</p>
+                <p><strong>Temperament:</strong> ${dog.temperament.join(', ')}</p>
+                <p><strong>Life Expectancy:</strong> ${dog.life_expectancy}</p>
+            `;
+            dogCard.appendChild(dogInfo);
+
+            // Append the card to the container
+            container.appendChild(dogCard);
+        });
+    }
+</script>
+
+</body>
+</html>
+
